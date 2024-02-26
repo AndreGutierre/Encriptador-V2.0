@@ -1,0 +1,375 @@
+
+header{
+    display: inline-block;
+}
+
+body{
+    background: #F3F5FC;
+    margin: 2.8vw;
+    padding: 0;
+    min-height: 100vh; /* Mínimo 100% del alto de la ventana */
+    display: flex;
+    flex-direction: column;
+
+
+    .inter-<uniquifier> {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0;
+    }
+}
+
+/*Seccion Input*/
+.input-texto{
+    float: left;
+    width: 67.2%;
+    height: 80vh;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/*Campo Input*/
+.campo-texto {
+    width: 47.2vw;
+    height: 62.4vh;
+    padding-top: 5vh;
+    font-weight: bold;
+    background: #F3F5FC;
+    border: none;
+    font-size: 2em;
+    color: #0A3871;
+    resize: none; /*Evita que el usuario pueda redimensionar el textarea*/
+    outline: none;
+}
+
+.campo-texto::placeholder{
+    color: #0A3871 !important;
+    font-weight: 300;
+}
+
+/*Seccion botones Input*/
+.botones{
+    text-align: left;
+    margin-left: 8.5vw;
+}
+
+.advertencia{
+    color: #495057;
+    margin-bottom: 1em;
+    position: absolute;
+    top: 79%;
+}
+
+.simbolo {
+    fill: #aebac5;
+}
+
+
+.btnEncriptar{
+    position: absolute;
+    top: 84%;
+    width: 22.7vw;
+    height: 6.5vh;
+    padding: auto;
+    font-size: 16px;
+    font-weight: 100;
+    color:white;
+    background: #0A3871;
+    border:none;
+    border-radius: 24px;
+    transition: 1s all;
+    cursor:pointer;
+    box-shadow: 5px 5px 20px #b1a9a9;
+}
+
+.btnEncriptar:hover{
+    transform: scale(1.1);
+    box-shadow: 7px 7px 7px #8a8484;
+}
+
+.btnDesencriptar{
+    position: absolute;
+    top: 84%;
+    left: 35%;
+    width: 22.7vw;
+    height: 6.5vh;
+    padding: auto;
+    margin-left: 1em;
+    font-size: 16px;
+    font-weight: 100;
+    color:#0A3871;
+    background: #D8DFE8;
+    border:none;
+    border-radius: 24px;
+    transition: 1s all;
+    cursor:pointer;
+    box-shadow: 5px 5px 20px #b1a9a9;
+}
+
+.btnDesencriptar:hover{
+    transform: scale(0.8);
+}
+
+/*Seccion Output*/
+.ouput-mensaje{
+    text-align: center;
+    position: relative;
+    float: right;
+    width: 27.2%;
+    height: 80vh;
+    box-sizing: border-box;
+}
+
+/*Campo Output*/
+.mensaje {
+    width: 80%;
+    height: 90%; 
+    padding: 10%;
+    display: inline-block;
+    box-shadow: 10px 10px 30px 5px #dfd7d7;
+    color: #495057;
+    background: #ffffff;
+    border: none;
+    border-radius: 32px;
+    font-size: 16px;
+    resize: none; /*Evita que el usuario pueda redimensionar el textarea*/
+    outline: none;
+    
+}
+
+.ocultar{
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+  
+#munecos, #sinTexto {
+    position: absolute;
+    justify-content: center;
+    max-width: 100%;
+    max-height: 50%;
+}
+  
+#munecos {
+    top: 18%;
+    left: 0%;
+}
+  
+#sinTexto {
+    top: 66%;
+    left: 0%;
+}
+  
+.btnCopiar {
+    position: absolute;
+    top: 70vh;
+    left: 5.8%;
+    width: 22.7vw;
+    height: 6.5vh;
+    padding: auto;
+    font-size: 18px;
+    font-weight: 100;
+    color: #0A3871;
+    background: rgba(255, 255, 255, 1);
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: 1s all;
+}  
+  
+.btnCopiar:hover{
+    transform: scale(1.05);
+    color: #0A3871 ;
+    box-shadow: 0 -0.5em 3em #8a8484;
+}
+
+footer {
+    float: inline-end;
+    width: 100%;
+    text-align: center;
+    margin: 2em 0 1em 0;
+    background-color: transparent; /* Color de fondo opcional */
+    font-size: 12px; /* Tamaño de fuente opcional */
+    color: #0A3871; /* Color de texto opcional */
+    font-weight: 400;
+}
+
+
+
+/* Media queries para hacerlo responsive */
+@media screen and (max-width:430px) {
+    
+    header{
+        margin-top: 2em;
+    }
+    
+    /*Seccion Input*/
+    .input-texto {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .campo-texto{
+        width: 90%;
+    }
+
+    .advertencia{
+        position: relative;
+        width: auto;
+    }
+
+    .botones{
+        display: inline-flexbox;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btnEncriptar {
+        position: relative;
+        width: 90%;
+        margin: 0;
+        left: 0;
+    }
+   
+    .btnDesencriptar {
+        position: relative;
+        width: 90%;
+        margin: 0;
+        margin-top: 1em;
+        left: 0;
+    }
+    
+    /*Seccion Output*/
+    .ouput-mensaje {
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        margin-top: 25%; /* Ajusta el margen superior según sea necesario */
+        width: 100%;
+        height: 60vw;
+    } 
+    
+    .mensaje{
+        width: 70%;
+        height:  70%;
+        
+    }
+
+    #munecos{
+        display: none;
+    }
+
+    #sinTexto {
+        position: absolute;
+        max-width: 80%;
+        max-height: 60%;
+    }
+        
+    #sinTexto {
+        top: 30%;
+        left: 10%;
+    }
+
+    .btnCopiar {
+        top: 70%;
+        width: 60%;
+        left: 20%; 
+    }
+
+}
+  
+/* Media queries para hacerlo responsive */
+@media screen and (min-width:431px) and (max-width: 850px){
+
+    header{
+        margin-top: 2em;
+    }
+    
+    /*Seccion Input*/
+    .input-texto {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        
+    }
+
+    .campo-texto{
+        width: 90%;
+    }
+
+    .advertencia{
+        position: relative;
+        width: auto;
+    }
+
+    .botones{
+        display: inline-flexbox;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    .btnEncriptar {
+        position: relative;
+        width: 40%;
+        margin: 1em;
+        left: 0;
+    }
+   
+    .btnDesencriptar {
+        position: relative;
+        width: 40%;
+        margin: 1em;
+        margin-top: 1em;
+        left: 0;
+    }
+    
+    /*Seccion Output*/
+    .ouput-mensaje {
+        position: relative;
+        margin: 0;
+        box-sizing: border-box;
+        margin-top: 10%; /* Ajusta el margen superior según sea necesario */
+        width: 100%;
+        height: 60vw;
+    } 
+    
+    .mensaje{
+        width: 70%;
+        height:  70%;
+    }
+
+    #munecos{
+        display: none;
+    }
+
+    #sinTexto {
+        position: absolute;
+        max-width: 80%;
+        max-height: 60%;
+    }
+        
+    #sinTexto { 
+        top: 30%;
+        left: 27%;
+    }
+
+    .btnCopiar {
+        top: 80%;
+        width: 60%;
+        left: 20%; 
+    }
+
+}
+
+
+
